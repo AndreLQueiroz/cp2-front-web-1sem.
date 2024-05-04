@@ -1,0 +1,244 @@
+/*VARIAVEIS*/
+:root{
+    --font-color:#000000;
+    --bg-color:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+}
+header{
+    width:100%;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+#menu{
+    display: flex;
+    list-style: none;
+}
+#menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    color:var(--font-color);
+}
+#menu a:hover{
+    color:rgba(223, 9, 169, 0.747);
+    font-size: 20px;
+}
+#btnMob{
+    display: none;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: var(--font-color);
+}
+footer h5{
+    display: flex;
+    justify-content: center;
+}
+#sobre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sobre #image{
+    width: 400px;
+    height: 400px;
+}
+#image:hover{
+ animation: efeito 0.6s ease-in-out infinite
+}
+
+/*RESPONSIVIDADE MOBILE*/
+@media (max-width:500px){
+    body{
+        background-image: linear-gradient(to right, rgb(186, 175, 218), #c7172b);
+    }
+    #btnMob{
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border:none;
+        background: none;
+        cursor: pointer;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top:50px;
+        right: 0px;
+        transition: 0.6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0  1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0px solid black;
+    }
+    /*ativando o nav e deixando o menu visivel*/
+    nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    }
+    /*criando a linha de cima do menu*/
+    #hamburg{
+        display: block;
+        width: 20px;
+        border-top:2px solid;
+    }
+    /*criando as duas linhas do menu com pseudo-elements*/
+
+    #hamburg::before,
+    #hamburg::after{
+        content:'';
+        display:block;
+        background: currentColor;
+        height: 2px;
+        margin-top: 5px;
+        transition:0.5s;
+        position: relative;
+    }
+    /*ativando a rotação do menu(antes)*/
+    nav.active #hamburg::before{
+        transform: rotate(135deg);
+    }
+    /*ativando a rotação contraria (depois)*/
+    nav.active #hamburg::after{
+        transform:rotate(-135deg);
+        top:-7px;
+    }
+
+
+
+
+
+/*RESPONSIVIDADE TABLET*/
+@media screen and (min-width:501px) and (max-width:900px){
+    body{
+        background-image: linear-gradient(to right, rgb(72, 1, 87), rgb(189, 182, 173));
+    }
+    #btnMob{
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border:none;
+        background: none;
+        cursor: pointer;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top:50px;
+        right: 0px;
+        transition: 0.6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0  1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+    /*ativando o nav e deixando o menu visivel*/
+    nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #sobre #image{
+        width: 80%;
+        height: 50%;
+    }
+    /*criando a linha de cima do menu*/
+    #hamburg{
+        display: block;
+        width: 20px;
+        border-top:2px solid;
+    }
+    /*criando as duas linhas do menu com pseudo-elements*/
+
+    #hamburg::before,
+    #hamburg::after{
+        content:'';
+        display:block;
+        background: currentColor;
+        height: 2px;
+        margin-top: 5px;
+        transition:0.5s;
+        position: relative;
+    }
+    /*ativando a rotação do menu(antes)*/
+    nav.active #hamburg::before{
+        transform: rotate(135deg);
+    }
+    /*ativando a rotação contraria (depois)*/
+    nav.active #hamburg::after{
+        transform:rotate(-135deg);
+        top:-7px;
+    }
+
+} 
+#imgBanner{
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+h1{
+    text-align: center;
+background-color: rgb(120, 6, 165);
+text-shadow: 0 0 10px black,0 0 5px black, 0 0 2px black;
+color:white
+}
+
+fieldset{
+    background-color: white;
+}
+h4{
+    text-align: center;
+    text-shadow: 0 0 10px black,0 0 5px black, 0 0 2px black; 
+    font-family: Arial,sans-serif;
+    color:white;
+    width: 300px;
+    
+}
+legend{
+    text-shadow: 0 0 10px black,0 0 5px black, 0 0 2px black;
+    color: white;
+    
+}
+#imge{
+    float: right;
+}
+#imga{
+width: 300px;
+height: 300px;
+}
